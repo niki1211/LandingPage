@@ -18,7 +18,7 @@ nav {
   z-index: 999;
   -webkit-transform: translateX(100%);
           transform: translateX(100%);
-  translate: transform 0.5s ease-in-out;
+  translate: transform 30s ease-in-out;
 }
 
 nav ul {
@@ -28,7 +28,7 @@ nav ul {
 }
 
 nav a {
-  color: black;
+  color: tomato;
   padding: .75em 2em;
   display: block;
 }
@@ -59,7 +59,7 @@ header svg {
 }
 
 .menu path {
-  stroke: #e65100;
+  stroke: #d13014;
   stroke-width: 2.3;
 }
 
@@ -70,7 +70,20 @@ header svg {
 
 .hero {
   color: white;
-  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 90vh;
 }
 
 .hero h1 {
@@ -83,9 +96,10 @@ header svg {
 }
 
 .hero .down-arrow {
-  position: absolute;
+  position: unset;
+  top: 3em;
   height: 15vh;
-  bottom: 1.5em;
+  animation: moveArrow 1s alternate-reverse infinite;
 }
 
 .hero .down-arrow path {
@@ -104,5 +118,178 @@ header svg {
   background-size: cover;
   background-position-x: 20%;
   background-position-y: 20%;
+  -webkit-animation: introLoad 2s forwards;
+          animation: introLoad 2s forwards;
+}
+
+.more-info img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 15em;
+}
+
+.more-info .title {
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+.more-info .desc {
+  line-height: 1.5rem;
+}
+
+.open-nav {
+  -webkit-transform: translate(0%);
+          transform: translate(0%);
+}
+
+@media only screen and (min-width: 680px) {
+  body {
+    margin: 1.5em 5em;
+    font-family: 'Poppins', sans-serif;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .menu {
+    display: none;
+  }
+  nav {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    translate: transform 30s ease-in-out;
+    display: block;
+    width: auto;
+    height: auto;
+    position: unset;
+    background: none;
+  }
+  nav svg.close {
+    display: none;
+  }
+  nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0;
+  }
+  nav ul a {
+    color: tomato;
+    padding: .5em 1.5em;
+    font-size: 0.9rem;
+    font-weight: bold;
+  }
+  nav ul a:hover {
+    background: none;
+  }
+  .hero-img {
+    left: unset;
+    right: 0;
+    width: 50%;
+    height: 30em;
+  }
+  .logo {
+    color: black;
+  }
+  .logo span {
+    color: tomato;
+  }
+  section.hero {
+    color: black;
+    width: 48%;
+    height: 85vh;
+    margin-bottom: 6em;
+  }
+  section.hero .down-arrow {
+    position: unset;
+    bottom: 0em;
+  }
+  section.hero .down-arrow path {
+    fill: black;
+    stroke: black;
+  }
+  .feature {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (auto)[2];
+        grid-template-columns: repeat(2, auto);
+    gap: 3em;
+    margin-bottom: 8em;
+  }
+  .feature img {
+    width: 25em;
+  }
+  .feature .content {
+    text-align: right;
+    width: 25em;
+  }
+  .feature.left {
+        grid-template-areas: "left right";
+  }
+  .feature.left img {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: left;
+  }
+  .feature.left .content {
+    text-align: left;
+    width: 25em;
+    -ms-grid-column-align: left;
+        justify-self: left;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .wrapper {
+    width: 1200px;
+    margin: 0 auto;
+  }
+  .feature {
+    gap: 0;
+  }
+}
+
+@-webkit-keyframes introLoad {
+  from {
+    -webkit-clip-path: polygon(0 0, 100% 0%, 100% 0, 0 0);
+            clip-path: polygon(0 0, 100% 0%, 100% 0, 0 0);
+  }
+  to {
+    -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%);
+            clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%);
+  }
+}
+
+@keyframes introLoad {
+  from {
+    -webkit-clip-path: polygon(0 0, 100% 0%, 100% 0, 0 0);
+            clip-path: polygon(0 0, 100% 0%, 100% 0, 0 0);
+  }
+  to {
+    -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%);
+            clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%);
+  }
+}
+
+@-webkit-keyframes moveArrow {
+  from {
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px);
+  }
+  to {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+@keyframes moveArrow {
+  from {
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px);
+  }
+  to {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
 }
 /*# sourceMappingURL=main.css.map */

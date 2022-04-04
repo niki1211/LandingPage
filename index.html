@@ -29,37 +29,57 @@
                 <path d="M4 7H12M20 7H16M4 12H20M4 17H8M20 17H12" stroke="#001A72" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
             </svg> 
         </header>
-        <div class="hero-img"></div>
+
         <section class="hero">
+            <div>
+            <div class="hero-img"></div>
             <h1>Chicken heads</h1>
             <p class="subhead">A bunch of bouncy and colourfull chicken heads, staring up at the camera.</p>
+            </div>
             <svg class="down-arrow" viewBox="0 0 24 112" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M13.5 2C13.5 1.17157 12.8284 0.5 12 0.5C11.1716 0.5 10.5 1.17157 10.5 2L13.5 2ZM10.9393 111.065C11.5251 111.651 12.4749 111.651 13.0607 111.065L22.6066 101.519C23.1924 100.934 23.1924 99.9838 22.6066 99.398C22.0208 98.8122 21.0711 98.8122 20.4853 99.398L12 107.883L3.51472 99.398C2.92893 98.8122 1.97918 98.8122 1.3934 99.398C0.807612 99.9838 0.807612 100.934 1.3934 101.519L10.9393 111.065ZM10.5 2L10.5 110.005H13.5L13.5 2L10.5 2Z" fill="#F88136"/>
             </svg>        
         </section>
+
         <section class="more-info">
             <div class="feature">
                 <div class="content">
                     <p class="title">Lorem Ipsum</p>
-                    <p class="title">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam minima soluta voluptatem quam quod sit!</p>
+                    <p class="desc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam minima soluta voluptatem quam quod sit!</p>
                 </div>
-                <img src="/images/richard-thomposn-PnMCRBRajFw-unsplash.jpg" alt=""> 
+                <img src="/images/birmingham-museums-trust-wvD0zZnRbcw-unsplash.jpg" alt=""> 
             </div>
             <div class="feature left">
                 <div class="content">
                     <p class="title">Lorem Ipsum</p>
-                    <p class="title">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam minima soluta voluptatem quam quod sit!</p>
+                    <p class="desc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam minima soluta voluptatem quam quod sit!</p>
                 </div>
                 <img src="/images/richard-thomposn-PnMCRBRajFw-unsplash.jpg" alt=""> 
             </div>
             <div class="feature">
                 <div class="content">
                     <p class="title">Lorem Ipsum</p>
-                    <p class="title">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam minima soluta voluptatem quam quod sit!</p>
+                    <p class="desc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam minima soluta voluptatem quam quod sit!</p>
                 </div>
-                <img src="/images/richard-thomposn-PnMCRBRajFw-unsplash.jpg" alt=""> 
+                <img src="/images/jens-schwan-7-TyF05u5Ww-unsplash.jpg" alt=""> 
             </div>
         </section>
+
     </div>
+
+    <script>
+        const menu = document.querySelector('.menu')
+        const close = document.querySelector('.close')
+        const nav = document.querySelector('nav')
+
+        menu.addEventListener('click', () => {
+            nav.classList.add('open-nav')
+        })
+
+        close.addEventListener('click', () => {
+            nav.classList.remove('open-nav')
+        })
+    </script>
+
 </body>
 </html>
